@@ -1,29 +1,33 @@
-Sure! Here’s a comprehensive README for your GitHub repository:
+Sure! Here is the README in .md format:
 
-AI-Powered System Security Hardening
+# AI-Powered System Security Hardening
 
 This repository contains an AI-powered system security assessment tool, inspired by Lynis, which analyzes and assesses the security status of a Linux system. The system uses machine learning to predict whether the system is secure or at risk based on certain configuration features, and it provides actionable recommendations to improve security.
 
-Key Features:
-	•	AI-based security assessment: The system uses machine learning models to predict whether the system is secure or at risk.
-	•	Automated feature collection: Automatically collects system features such as SSH root login, firewall status, disk usage, etc.
-	•	Actionable recommendations: Based on the analysis, the tool provides suggestions to harden the system’s security posture.
-	•	Minimal dependencies: Built with Bash and Python, requiring only essential system libraries and Python packages.
+### Key Features:
+- **AI-based security assessment**: The system uses machine learning models to predict whether the system is secure or at risk.
+- **Automated feature collection**: Automatically collects system features such as SSH root login, firewall status, disk usage, etc.
+- **Actionable recommendations**: Based on the analysis, the tool provides suggestions to harden the system's security posture.
+- **Minimal dependencies**: Built with Bash and Python, requiring only essential system libraries and Python packages.
 
-Table of Contents
-	1.	Installation
-	2.	How It Works
-	3.	Usage
-	4.	Machine Learning Model
-	5.	Contributing
-	6.	License
+## Table of Contents
+1. [Installation](#installation)
+2. [How It Works](#how-it-works)
+3. [Usage](#usage)
+4. [Machine Learning Model](#machine-learning-model)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-Installation
+---
 
-Prerequisites
-	1.	System requirements: The tool is designed to run on Linux-based systems, including Kali, AlmaLinux, and Ubuntu.
-	2.	Python 3: Ensure you have Python 3 and pip installed on your system.
+## Installation
 
+### Prerequisites
+
+1. **System requirements**: The tool is designed to run on Linux-based systems, including Kali, AlmaLinux, and Ubuntu.
+2. **Python 3**: Ensure you have Python 3 and `pip` installed on your system.
+
+```bash
 sudo apt update
 sudo apt install python3 python3-pip python3-dev
 
@@ -123,5 +127,3 @@ The system is at risk. Recommendations:
 - Check disk usage
 
 Feel free to modify or extend this tool to suit your needs. If you encounter any issues, open an issue in the GitHub repository, and we’ll be happy to assist you.
-
-This README provides the necessary instructions for using and extending the AI-powered system security hardening tool.
