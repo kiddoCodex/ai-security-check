@@ -1,5 +1,4 @@
 
-
 # AI-Powered System Security Hardening
 
 This repository contains an AI-powered system security assessment tool, inspired by Lynis, which analyzes and assesses the security status of a Linux system. The system uses machine learning to predict whether the system is secure or at risk based on certain configuration features, and it provides actionable recommendations to improve security.
@@ -27,7 +26,6 @@ This repository contains an AI-powered system security assessment tool, inspired
 1. **System requirements**: The tool is designed to run on Linux-based systems, including Kali, AlmaLinux, and Ubuntu.
 2. **Python 3**: Ensure you have Python 3 and `pip` installed on your system.
 
-```bash
 sudo apt update
 sudo apt install python3 python3-pip python3-dev
 
