@@ -1,3 +1,5 @@
+
+
 # AI-Powered System Security Hardening
 
 This repository contains an AI-powered system security assessment tool, inspired by Lynis, which analyzes and assesses the security status of a Linux system. The system uses machine learning to predict whether the system is secure or at risk based on certain configuration features, and it provides actionable recommendations to improve security.
@@ -125,3 +127,4 @@ The system is at risk. Recommendations:
 - Check disk usage
 
 Feel free to modify or extend this tool to suit your needs. If you encounter any issues, open an issue in the GitHub repository, and we’ll be happy to assist you.
+
