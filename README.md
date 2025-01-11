@@ -22,107 +22,125 @@ This repository contains an AI-powered system security assessment tool, inspired
 ## Installation
 
 ### Prerequisites
+- **System requirements**: The tool is designed to run on Linux-based systems, including Kali, AlmaLinux, and Ubuntu.
+- **Python 3**: Ensure you have Python 3 and pip installed on your system.
 
-1. **System requirements**: The tool is designed to run on Linux-based systems, including Kali, AlmaLinux, and Ubuntu.
-2. **Python 3**: Ensure you have Python 3 and `pip` installed on your system.
+bash
+  sudo apt update
+  sudo apt install python3 python3-pip python3-dev
 
-sudo apt update
-sudo apt install python3 python3-pip python3-dev
+### Required Python libraries:
+Install the required Python packages for machine learning.
 
-	3.	Required Python libraries: Install the required Python packages for machine learning.
-
+bash
+Copy code
 pip3 install scikit-learn pandas
+### Clone the repository:
+Clone the repository to your local machine:
 
-	4.	Clone the repository: Clone the repository to your local machine.
-
-git clone https://github.com/yourusername/ai-security-hardening.git
+bash
+Copy code
+git clone https://github.com/kiddoCodex/ai-security-hardening.git
 cd ai-security-hardening
 
-How It Works
-
+### How It Works
 The tool collects security-related features from the system, such as:
-	•	SSH root login status
-	•	Firewall status
-	•	File permissions
-	•	System updates
-	•	Disk usage
 
-These features are passed to a pre-trained machine learning model which predicts whether the system is secure or at risk. Based on the prediction, the tool provides a set of actionable recommendations to improve the security of the system.
+SSH root login status
+Firewall status
+File permissions
+System updates
+Disk usage
+These features are passed to a pre-trained machine learning model, which predicts whether the system is secure or at risk. Based on the prediction, the tool provides a set of actionable recommendations to improve the security of the system.
 
-Key Components:
-	•	ai_security_check.sh: The main Bash script that collects system features and triggers the prediction process.
-	•	predict_security.py: The Python script that loads the trained machine learning model and makes predictions based on the collected features.
-	•	ml_model.py: The Python script used to train the machine learning model.
+### Key Components:
+ai_security_check.sh: The main Bash script that collects system features and triggers the prediction process.
+predict_security.py: The Python script that loads the trained machine learning model and makes predictions based on the collected features.
+ml_model.py: The Python script used to train the machine learning model.
 
-Usage
-
+### Usage
 Once you have the repository set up and dependencies installed, you can run the tool as follows:
-	1.	Make the Bash script executable:
 
+1. Make the Bash script executable:
+
+bash
+Copy code
 chmod +x ai_security_check.sh
 
-	2.	Run the security check:
+2. Run the security check:
 
+bash
+Copy code
 sudo ./ai_security_check.sh
 
 The script will:
-	•	Collect security-related system features.
-	•	Pass them to the trained machine learning model.
-	•	Predict whether the system is secure or at risk.
-	•	Provide actionable recommendations based on the model’s prediction.
 
-Machine Learning Model
+Collect security-related system features.
+Pass them to the trained machine learning model.
+Predict whether the system is secure or at risk.
+Provide actionable recommendations based on the model’s prediction.
 
+### Machine Learning Model
 The machine learning model is trained using system configuration data, where features represent system security settings, and the target variable indicates whether the system is secure (1) or at risk (0).
 
-Training the Model
-
+### Training the Model
 The model is trained on labeled data that includes features such as:
-	•	SSH root login status
-	•	Firewall status
-	•	Permissions of critical files
-	•	System update status
-	•	Disk usage status
 
+SSH root login status
+Firewall status
+Permissions of critical files
+System update status
+Disk usage status
 You can train the model using the ml_model.py script by providing your own labeled data or by modifying the existing sample dataset. After training, the model is saved using Pickle for future predictions.
 
+bash
+Copy code
 python3 ml_model.py
-
 This will train the model and save it as system_security_model.pkl.
 
-Making Predictions
-
+### Making Predictions
 Once the model is trained and saved, the system can predict the security status based on the collected features. The predict_security.py script is used for this purpose.
 
-Contributing
-
+### Contributing
 If you want to contribute to the development of this project, feel free to fork the repository, create a branch, and submit a pull request. You can contribute by:
-	•	Adding new security checks
-	•	Improving the machine learning model
-	•	Enhancing the feature collection scripts
-	•	Adding more actionable recommendations
 
-License
+Adding new security checks
+Improving the machine learning model
+Enhancing the feature collection scripts
+Adding more actionable recommendations
 
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Example Output:
-
+### Example Output
 When you run the tool, you will see the following output:
 
+perl
+Copy code
 Collecting system features...
 Features collected: 1, 1, 1, 1, 1
 Predicting security status...
 The system is secure.
-
 If the system is at risk, you will receive a recommendation:
 
+diff
+Copy code
 The system is at risk. Recommendations:
 - Disable root login for SSH
 - Enable firewall
 - Secure file permissions
 - Run system updates
 - Check disk usage
+Feel free to modify or extend this tool to suit your needs. If you encounter any issues, open an issue in the GitHub repository, and we’ll be happy to assist you.
+
+
+  
+
+
+
+
+
+
 
 Feel free to modify or extend this tool to suit your needs. If you encounter any issues, open an issue in the GitHub repository, and we’ll be happy to assist you.
 
